@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<link rel="stylesheet" href="css/headerstyle.css">
+<link rel="stylesheet" href="css/style.css">
 
 <!-- font -->
 <link rel="preconnect" href="https://fonts.googleapis.com">

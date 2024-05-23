@@ -1,3 +1,4 @@
+
 * {
     margin: 0px;
 }
@@ -6,6 +7,7 @@
     font-family: "Poetsen One", sans-serif;
     font-weight: 400;
     font-style: normal;
+    color: white;
 }
 
 
@@ -40,7 +42,6 @@ h3{
     color: white;
 }
 
-
 .blauw {
     background-color: #3F72FF;
 }
@@ -53,11 +54,9 @@ h3{
     width: 100vw;
 }
 
-.width90 {
-    background-color: deeppink;
-    width: 800%;
-}
 
+
+/* header */
 #header {
     height: 10vh;
 }
@@ -74,4 +73,39 @@ margin: 10px;
 
 .headerbuttons{
     width: 25%;
+}
+/* header_eind */
+
+
+/* index landingspagina homepage */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    justify-content: space-between; 
+}
+
+.trip-item {
+    width: calc(50% - 40px); 
+    box-sizing: border-box;
+    padding: 20px;
+    margin: 10px; 
+    border-radius: 8px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    position: relative;
+}
+
+.trip-info {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+.trip-price {
+    position: absolute;
+    bottom: 20px;
+    right: 20px; 
 }
