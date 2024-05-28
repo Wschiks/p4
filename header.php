@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <link rel="stylesheet" href="css/style.css">
 
 <!-- font -->
@@ -13,8 +14,8 @@
     rel="stylesheet">
 
 <html>
-
 <head>
+
 
 </head>
 

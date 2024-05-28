@@ -11,6 +11,11 @@
 }
 
 
+.geelfont{
+    color: #FFC22F; 
+}
+
+
 
 .midden{
     display: flex;
@@ -77,26 +82,28 @@ margin: 10px;
 /* header_eind */
 
 
+
+
 /* index landingspagina homepage */
+
+.onze {
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 80px;
+}
+
 .container {
     display: flex;
+    
     flex-wrap: wrap;
     padding: 20px;
     justify-content: space-between; 
 }
 
-.trip-item {
-    width: calc(50% - 40px); 
-    box-sizing: border-box;
-    padding: 20px;
-    margin: 10px; 
-    border-radius: 8px;
-    height: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; 
-    position: relative;
-}
+
+
+
 
 .trip-info {
     position: absolute;
@@ -109,3 +116,8 @@ margin: 10px;
     bottom: 20px;
     right: 20px; 
 }
+
+
+
+/* info.php */
+
