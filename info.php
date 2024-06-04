@@ -11,29 +11,44 @@
         </div>
         <div class="container">
             <?php
-            if (isset($_GET['img']) && isset($_GET['land']) && isset($_GET['stad']) && isset($_GET['personen']) && isset($_GET['prijs'])) {
-                $img = htmlspecialchars($_GET['img']);
-                $land = htmlspecialchars($_GET['land']);
-                $stad = htmlspecialchars($_GET['stad']);
-                $personen = htmlspecialchars($_GET['personen']);
-                $prijs = htmlspecialchars($_GET['prijs']);
+            $tripID = $_GET['tripID'];
 
-                echo '<div class="trip-item" style="background-image: url(\'' . $img . '\'); background-size: cover; background-position: center;">';
-                echo '<div class="trip-info">';
-                echo '<h3>' . $land . '</h3>';
-                echo '<h3>' . $stad . '</h3>';
-                echo '<h3>personen: ' . $personen . '</h3>';
-                echo '</div>';
+            $sql = 'SELECT * FROM trip where tripID=:tripID';
+            $stmt = $conn->prepare($sql);
+            $stmt->bindParam(':tripID', $tripID);
+            $stmt->execute();
+            $result = $stmt->fetchAll();
+            
+                    foreach ($result as $key) {
+            echo '<a href=info.php?tripID='. $key['tripID'] .' class=trip-link>';
+            echo '<div class="trip-item"';
+            if (array_key_exists('img', $key)) {
+                echo ' style="background-image: url(\'' . $key['img'] . '\'); background-size: cover; background-position: center;"';
+            }
+            echo '>';
+            echo '<div class="trip-info">';
+            if (array_key_exists('land', $key)) {
+                echo '<h3>' . $key['land'] . '</h3>';
+            }
+            if (array_key_exists('stad', $key)) {
+                echo '<h3>' . $key['stad'] . '</h3>';
+            }
+            if (array_key_exists('personen', $key)) {
+                echo '<h3>personen: ' . $key['personen'] . '</h3>';
+            }
+            echo '</div>';
+            if (array_key_exists('prijs', $key)) {
                 echo '<div class="trip-price">';
                 echo '<h3>Vanaf:</h3>';
-                echo '<h3>&euro;' . $prijs . '</h3>';
+                echo '<h3>&euro;' . $key['prijs'] . '</h3>';
                 echo '</div>';
-                echo '</div>';
-            } else {
-                echo '<p>Geen reis informatie beschikbaar.</p>';
             }
+            echo '</div>';
+        }
             ?>
         </div>
     </section>
 </body>
 </html>
+
+
