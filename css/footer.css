@@ -4,7 +4,11 @@
     margin: 0%;
 }
 
-
+.lettergeel{
+    color:#FFC22F ;
+    font-weight: 600;
+    font-size: 35px;
+}
 .geel {
     background-color: #FFC22F;
 }
@@ -204,4 +208,61 @@ margin-right: 250px;
     height: 70%;
     right: 0;
     margin-right: 120px;
+}
+#overons{
+    background-color: #3F72FF;
+    width: 100%;
+    height: 80vh;
+    display: flex;
+   
+}
+.overons-fotovak{
+   
+       
+    }
+.overons-foto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+width: 50%;
+  
+
+}
+.overons-text{
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    height:550px ;
+    justify-content: center;
+    align-items: center;
+}
+.fotovak1{
+    display: flex;
+}
+.fotovak2{
+    display: flex;
+}
+.foto1{
+ margin-bottom: 10px;
+}
+.foto2{
+    width: 20vw;
+    margin: 5px;
+    margin-left: 3px;
+    display: flex;
+    align-items: end;
+  
+} 
+.foto3{
+ margin-right: 17px; 
+}
+.foto4{
+   
+}
+.fotodiv{
+   margin-left: 15px;
+   margin-bottom: 10px;
+    height: 20vh;
 }
