@@ -1,0 +1,268 @@
+*{
+    
+    padding: 0%;
+    margin: 0%;
+}
+
+.lettergeel{
+    color:#FFC22F ;
+    font-weight: 600;
+    font-size: 35px;
+}
+.geel {
+    background-color: #FFC22F;
+}
+ 
+.blauw {
+    background-color: #3F72FF;
+}
+
+.fontblack{
+    color: black !important;
+}
+ 
+.font {
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    
+}
+ .fontgroot{
+    font-size: 45px;
+ }
+h3{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+}
+
+
+    
+
+
+.footer{
+    width: auto ;
+    height:40vh ;
+    display: flex;
+    align-items: center;
+}
+.footerbuttons{
+display: flex;
+justify-content: space-evenly;
+width: 60%;
+align-items: center;
+}
+.nieuwsbrief{
+    height: 10vh;
+    width: 40vw;
+  display: flex; 
+  justify-content: center;
+
+  
+}
+.nieuwsbriefform{
+   width: 18vw;
+   height: 25vh;
+  display: flex; 
+  flex-direction: column;
+  
+  
+}
+.nieuwsbriefbutton{
+   width: 50%; 
+  margin-top: 7px;
+   border-radius: 20px;
+   height: 6vh;
+   border: none;
+   color: white;
+}
+.typebar{
+    border-radius: 20px;
+    border: none;
+    height: 6vh;
+}
+.footer2{
+    display: flex;
+    justify-content: space-around;
+}
+.payment{
+    display: flex;
+    align-items: center;
+width: auto;
+height: 15vh;
+margin-right: 250px;
+
+}
+.paymentlogo{
+    width: 60px;
+    height: 30px;
+
+
+}
+.countrys{
+    display: flex;
+    align-items: center;
+}
+#country{
+    border: none;
+    display: flex;
+    justify-content: center;
+   
+   }
+   .lijnvak{
+    width: 100%;
+    
+    
+    display: flex;
+   justify-content: center;
+   align-items: center;
+   }
+   .lijn{
+    width: 85vw;
+    height: 2px;
+    background-color: black;
+   
+   }
+   .rechten{
+   
+    height: 10vh;
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+   }
+   .rechtentext{
+    margin-left: 20px;
+   }
+   
+#eersteoog{
+    
+}
+.eersteoog1{
+    height: 55vh;
+    
+    background-color: #3F72FF;
+    display: flex;
+
+}
+.eersteoog2{
+  
+    height: 35vh;
+    width: 100%;
+   
+
+}
+.kleinetext{
+    width: 65%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.titleplek{
+    width: 65%;
+    margin-bottom: 20px;
+}
+.eersteoog_text{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height:400px ;
+    justify-content: center;
+    align-items: center;
+}
+.startimg{
+   
+  width: 40%;
+   
+}
+/* test */
+
+ 
+.container {
+    position: relative;
+    width: 100%;
+}
+ 
+.div1, .div2 {
+    width: 100%;
+    height: 50vh; /* 50% van de viewport hoogte */
+}
+ 
+.div1 {
+    background-color: lightblue; /* of elke gewenste kleur */
+}
+ 
+.div2 {
+    background-color: lightgreen; /* of elke gewenste kleur */
+}
+ 
+.overlap-image {
+    position: absolute;
+    width: 30%; /* Pas dit aan naar wens */
+    top: 50%; /* Plaatst de afbeelding op 50% van de hoogte van .div1 */
+    transform: translateY(-50%); /* Verschuift de afbeelding omhoog zodat hij half op .div1 en half op .div2 staat */
+    height: 70%;
+    right: 0;
+    margin-right: 120px;
+}
+#overons{
+    background-color: #3F72FF;
+    width: 100%;
+    height: 80vh;
+    display: flex;
+   
+}
+.overons-fotovak{
+   
+       
+    }
+.overons-foto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+width: 50%;
+  
+
+}
+.overons-text{
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    height:550px ;
+    justify-content: center;
+    align-items: center;
+}
+.fotovak1{
+    display: flex;
+}
+.fotovak2{
+    display: flex;
+}
+.foto1{
+ margin-bottom: 10px;
+}
+.foto2{
+    width: 20vw;
+    margin: 5px;
+    margin-left: 3px;
+    display: flex;
+    align-items: end;
+  
+} 
+.foto3{
+ margin-right: 17px; 
+}
+.foto4{
+   
+}
+.fotodiv{
+   margin-left: 15px;
+   margin-bottom: 10px;
+    height: 20vh;
+}
