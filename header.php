@@ -34,13 +34,13 @@
 
 
         <div class="flex headerbuttons midden">
-            <a href="login.php">
+            <a href="index.php">
                 <h3>Home</h3>
             </a>
-            <a href="login.php">
+            <a href="#onze_reizen">
                 <h3>Fliegen</h3>
             </a>
-            <a href="login.php">
+            <a href="#overons">
                 <h3>Over ons</h3>
             </a>
             <a href="login.php">

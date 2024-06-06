@@ -1,5 +1,8 @@
 <?php include ('connection.php'); ?>
 <?php include ('header.php'); ?>
+<?php include ('eerste_oog.php'); ?>
+<?php include ('zoekbalk.php'); ?>
+
 <!DOCTYPE html>
 <html lang="nl">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -62,3 +65,6 @@
     </section>
 </body>
 </html>
+
+<?php include ('overons.php'); ?>
+<?php include ('footer.php'); ?>

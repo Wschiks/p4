@@ -6,7 +6,7 @@
  
 </head>
 <body>
-    <div class="search-form">
+    <div class="zoekform blauw width100 flex">
         <form id="destinationForm">
             <label for="destination">Bestemming:</label>
             <select id="destination" name="destination" required>
