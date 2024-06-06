@@ -1,0 +1,19 @@
+<?php
+include ('connection.php'); 
+ 
+ $sql = "INSERT INTO users(username, password, email, naam) VALUES (:username,:password,:email,:naam)";
+ $stmt = $conn->prepare($sql);
+ $stmt -> bindParam(':username', $_POST['username']) ;
+ $stmt -> bindParam(':password', $_POST['password']) ;
+ $stmt -> bindParam(':email', $_POST['email']) ;
+ $stmt -> bindParam(':naam', $_POST['naam']) ;
+ $result = $stmt->execute();
+ 
+ $data = $stmt -> fetch();
+ 
+ if($result){
+     header('Location: login.php');
+ }else{
+     echo 'FOUT';
+ }
+     

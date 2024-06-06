@@ -1,0 +1,81 @@
+* {
+    margin: 0px;
+}
+
+.font {
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+
+.midden{
+    display: flex;
+    justify-content: space-between !important;
+    align-items: center;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popp {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.white {
+    color: white;
+}
+
+
+h3{
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: white;
+}
+
+
+.blauw {
+    background-color: #3F72FF;
+}
+
+.geel {
+    background-color: #FFC22F;
+}
+
+.width100 {
+    width: 100vw;
+}
+
+.width90 {
+    background-color: deeppink;
+    width: 800%;
+}
+
+#header {
+    height: 10vh;
+}
+
+.Login{
+    width: 10%;
+    height:80%;
+    border-radius: 25px;
+}
+
+.margin{
+margin: 10px;
+}
+
+.headerbuttons{
+    width: 25%;
+}
+
+a{
+    text-decoration: none;
+}
