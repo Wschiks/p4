@@ -36,14 +36,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $user = $stmt->fetch();
 
-       
-
-
-        if ($_POST['password'] == "admin" && $user['password'] == "admin") {
-            header("Location: menuaanpassen.php");
-        } else {
-
-
             if ($user && $_POST['wachtwoord'] == $user['wachtwoord']) {
                 header("Location: index.php");
 
@@ -51,7 +43,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                 echo "Fout: Ongeldige gebruikersnaam of wachtwoord.";
             }
-        }
 
     } else {
 
