@@ -1,7 +1,8 @@
 <?php include ('header.php'); ?>
+<?php include ('connection.php'); ?>
 
 <body>
-    <form action="data/dataRegristreren" method="post">
+    <form action="data/dataRegristreren.php" method="POST">
         <section class="midden">
             <label class="wit">gebruikersnaam</label>
             <input type="text" name="username" required>

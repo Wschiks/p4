@@ -4,10 +4,10 @@
     <form method="POST">
         <div class="fotohacktergrond">
             <section class="midden">
-                <label class="wit">gebruikersnaam</label>
-                <input type="text" name="gebruikersnaam">
+                <label class="wit">username</label>
+                <input type="text" name="username">
                 <label class="wit">wachtwoord</label>
-                <input type="password" name="wachtwoord">
+                <input type="password" name="password">
                 <input type="submit">
                 <a href="regristreren.php"><button type="button">nieuw account maken</button></a>
             </section>
