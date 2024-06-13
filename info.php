@@ -1,10 +1,12 @@
-<?php include('connection.php'); ?>
-<?php include('header.php'); ?>
+<?php include ('connection.php'); ?>
+<?php include ('header.php'); ?>
 <!DOCTYPE html>
 <html lang="nl">
+
 <head>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <section id="reis_info">
         <div class="infoContainer">
@@ -17,18 +19,33 @@
             $stmt->execute();
             $result = $stmt->fetchAll();
             foreach ($result as $key) {
-                echo '<div class="trip-item"';
-                if (array_key_exists('img', $key)) {
-                    echo ' style="background-image: url(\'' . $key['img'] . '\'); background-size: cover; background-position: center;"';
-                }
-                echo '></div>';
+                ?>
+                <div class="trip-item" <?php if (array_key_exists('img', $key)) { ?>
+                        style="background-image: url('<?= $key['img'] ?>'); background-size: cover; background-position: center;"
+                    <?php } ?>>
+                </div>
+                <?php
             }
             ?>
         </div>
 
-        <div class="geel">
+        <?php
+        $tripID = $_GET['tripID'];
+        $sql = "SELECT * FROM trip";
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
+        $result = $stmt->fetchAll();
+
+        foreach ($result as $key) {
+            ?>
+            <h3> <?php echo $key['stad'] ?></h3>
+
             <?php
-            // Stel $tripID in op 1
+        }
+        ?>
+        <div class=" blauw between">
+            <?php
+           
             $tripID = $_GET['tripID'];
 
             $sql = 'SELECT * FROM info where tripID=:tripID';
@@ -37,50 +54,46 @@
             $stmt->execute();
             $result = $stmt->fetchAll();
             foreach ($result as $key) {
-                if (array_key_exists('stad', $key)) {
-                    echo '<h1 style="text-align: center;">' . $key['stad'] . '</h1>';
-                }
-                if (array_key_exists('informatiestuk', $key)) {
-                    echo '<p>' . $key['informatiestuk'] . '</p>';
-                }
-                if (array_key_exists('infoIMG', $key)) {
-                    echo '<img src="' . $key['infoIMG'] . '" alt="Info Image" style="float: left; margin-right: 20px;">';
-                }
+                ?>
+                <div class="tekstOver">
+                    <h3> Over Madrid </h3>
+                    <div class="content">
+                    </div>
+
+                    <h3> <?php echo $key['informatiestuk'] ?> </h3>
+                </div>
+                <img class=fotoinfo src="<?php echo $key['infoIMG'] ?>" alt=Info Image>
+
+
+                <?php
             }
             ?>
         </div>
-
         <table>
             <?php
             foreach ($result as $key) {
-                echo '<tr>';
-                if (array_key_exists('luchthavenaankomst', $key)) {
-                    echo '<td>Luchthaven aankomst: ' . $key['luchthavenaankomst'] . '</td>';
-                }
-                echo '</tr>';
-                echo '<tr>';
-                if (array_key_exists('luchthavenvertek', $key)) {
-                    echo '<td>Luchthaven vertrek: ' . $key['luchthavenvertek'] . '</td>';
-                }
-                echo '</tr>';
-                echo '<tr>';
-                if (array_key_exists('Luchtvaartmaaschappij', $key)) {
-                    echo '<td>Luchtvaartmaatschappij: ' . $key['Luchtvaartmaaschappij'] . '</td>';
-                }
-                echo '</tr>';
-                echo '<tr>';
-                if (array_key_exists('Afstand', $key)) {
-                    echo '<td>Afstand: ' . $key['Afstand'] . '</td>';
-                }
-                echo '</tr>';
-                echo '<tr>';
-                if (array_key_exists('Vluchttijd', $key)) {
-                    echo '<td>Vluchttijd: ' . $key['Vluchttijd'] . '</td>';
-                }
-                echo '</tr>';
+                ?>
+                <tr class="blauw">
+                    <th>Luchthaven aankomst</th>
+                    <td> <?php echo $key['luchthavenaankomst'] ?></td>
+                </tr>
+                <tr class="geel">
+                    <th>Luchthaven vertrek</th>
+                    <td><?php echo $key['luchthavenvertek'] ?></td>
+                </tr>
+                <tr class="blauw">
+                    <th>Luchtvaartmaatschappij</th>
+                    <td> <?php echo $key['Luchtvaartmaaschappij'] ?></td>
+                </tr>
+                <tr class="geel">
+                    <th>Afstand</th>
+                    <td><?php echo $key['Afstand'] ?></td>
+                </tr>
+                <tr class="blauw">
+                    <th>Vluchttijd</th>
+                    <td> <?php echo $key['Vluchttijd'] ?></td>
+                </tr>
+                <?php
             }
             ?>
         </table>
-    </section>
-</body>
-</html>

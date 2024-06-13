@@ -9,6 +9,7 @@
 
 </div>
     <form method="POST">
+<<<<<<< HEAD
 
         <section class="loginpage">
             <div class="loginform">
@@ -29,6 +30,7 @@
                 </div>
             </div>
         </section>
+
 
     </form>
 

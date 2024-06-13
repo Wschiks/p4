@@ -1,10 +1,12 @@
 <?php include ('header.php'); ?>
+<<<<<<< HEAD
 <head>
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="registerachtergrond">
     <form action="data/dataRegristreren" method="post">
+
         <section class="midden">
             <label class="wit">gebruikersnaam</label>
             <input type="text" name="username" required>

@@ -36,12 +36,12 @@
 
         foreach ($result as $key) {
             echo '<a href=info.php?tripID='. $key['tripID'] .' class=trip-link>';
-            echo '<div class="trip-item"';
+            echo '<div class="trip-item margintopbot"';
             if (array_key_exists('img', $key)) {
                 echo ' style="background-image: url(\'' . $key['img'] . '\'); background-size: cover; background-position: center;"';
             }
             echo '>';
-            echo '<div class="trip-info">';
+            echo '<div class="trip-info margintopbot">';
             if (array_key_exists('land', $key)) {
                 echo '<h3>' . $key['land'] . '</h3>';
             }
@@ -66,5 +66,5 @@
 </body>
 </html>
 
-<?php include ('overons.php'); ?>
+
 <?php include ('footer.php'); ?>
