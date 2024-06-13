@@ -23,8 +23,11 @@
     <section id="header" class="width100 blauw flex midden">
         <div class="flex">
             <a href="index.php">
+                <div class="logoflex">
                 <img src="img/logo.png" alt="">
+               
                 <h2 class="white font">Flieg.com</h2>
+                </div>
             </a>
         </div>
 

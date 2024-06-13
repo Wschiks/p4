@@ -1,8 +1,12 @@
 <?php include ('header.php'); ?>
-<?php include ('connection.php'); ?>
-
+<<<<<<< HEAD
+<head>
+<link rel="stylesheet" href="css/style.css">
+</head>
 <body>
-    <form action="data/dataRegristreren.php" method="POST">
+    <div class="registerachtergrond">
+    <form action="data/dataRegristreren" method="post">
+
         <section class="midden">
             <label class="wit">gebruikersnaam</label>
             <input type="text" name="username" required>
@@ -19,4 +23,5 @@
             <input type="submit" value="Registreren">
         </section>
     </form>
+    </div>
 </body>
