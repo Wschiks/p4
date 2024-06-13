@@ -40,10 +40,10 @@
             <a href="#onze_reizen">
                 <h3>Fliegen</h3>
             </a>
-            <a href="#overons">
+            <a href="#.php">
                 <h3>Over ons</h3>
             </a>
-            <a href="login.php">
+            <a href="contact.php">
                 <h3>Contact</h3>
             </a>
         </div>
