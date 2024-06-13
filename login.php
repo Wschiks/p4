@@ -1,17 +1,35 @@
 <?php include ('header.php'); ?>
-<body>
 
+<head>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<div class="bluevak">
+
+</div>
     <form method="POST">
-        <div class="fotohacktergrond">
-            <section class="midden">
-                <label class="wit">gebruikersnaam</label>
-                <input type="text" name="gebruikersnaam">
-                <label class="wit">wachtwoord</label>
-                <input type="password" name="wachtwoord">
-                <input type="submit">
-                <a href="regristreren.php"><button type="button">nieuw account maken</button></a>
-            </section>
-        </div>
+
+        <section class="loginpage">
+            <div class="loginform">
+                <div class="logintitle">
+                    <h3 class="font">LOGIN</h3>
+                </div>
+
+                <input class="logvak font" type="text" name="gebruikersnaam" placeholder="gebruikersnaam">
+                <div class="wwinput">
+
+                    <input class="logvak font" type="password" name="wachtwoord" placeholder="wachtwoord">
+                    <div>
+                        <a class="to_register fontgrey" href="regristreren.php">registeren</a>
+                    </div>
+                </div>
+                <div class="submitvak">
+                <input class=" loginbutton font" type="submit" value="login">
+                </div>
+            </div>
+        </section>
+
     </form>
 
 
@@ -36,7 +54,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $user = $stmt->fetch();
 
-       
+
 
 
         if ($_POST['password'] == "admin" && $user['password'] == "admin") {
@@ -64,4 +82,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 ?>
-
+<?php include ('footer.php'); ?>
