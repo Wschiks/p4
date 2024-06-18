@@ -1,27 +1,38 @@
 <?php include ('header.php'); ?>
-<<<<<<< HEAD
+
 <head>
-<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    <div class="registerachtergrond">
+    <div class="bluevak">
+
+    </div>
+
     <form action="data/dataRegristreren" method="post">
 
-        <section class="midden">
-            <label class="wit">gebruikersnaam</label>
-            <input type="text" name="username" required>
+        <section class="loginpage">
+            <div class="loginform">
+                <div class="logintitle">
+                    <h3 class="font">registreren</h3>
+                </div>
+                <input class="logvak font" type="text" name="naam" placeholder="naam" required>
 
-            <label class="wit">wachtwoord</label>
-            <input type="password" name="password" required>
+                <input class="logvak font" type="email" name="email" placeholder="email" required>
 
-            <label class="wit">e-mail</label>
-            <input type="email" name="email" required>
+                <input class="logvak font" type="text" name="gebruikersnaam" placeholder="gebruikersnaam">
 
-            <label class="wit">naam</label>
-            <input type="text" name="naam" required>
 
-            <input type="submit" value="Registreren">
+                <input class="logvak font" type="password" name="wachtwoord" placeholder="wachtwoord">
+
+
+                <div class="submitvak">
+                    <input class=" loginbutton font" type="submit" value="registreren">
+                </div>
+            </div>
         </section>
+
     </form>
-    </div>
+
 </body>
+<?php include ('footer.php'); ?>

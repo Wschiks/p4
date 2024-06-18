@@ -8,101 +8,162 @@
     font-style: normal;
     color: white;
 }
+
 .fontgrey {
     font-family: "Poetsen One", sans-serif;
     font-weight: 400;
     font-style: normal;
-color: #818181;
+    color: #818181;
+}
+.font2 {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-style:normal;
+    color: #BFBFBF;
 }
 
-.geelfont{
-    color: #FFC22F; 
+.geelfont {
+    color: #FFC22F;
 }
 
-.midden{
-   
+.midden {
+
     display: flex;
     justify-content: space-between !important;
     align-items: center;
-    
-    
+
+
 }
-.bluevak{
+
+.bluevak {
     width: 100%;
     height: 50vh;
     background-color: #3F72FF;
 }
-.loginpage{
-height: 105vh;
-width: 100%;
-display: flex;
-justify-content: center;
+
+.loginpage {
+    height: 105vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 
 
 }
-.loginform{
+
+.loginform {
     width: 80%;
-   height: 100vh;
+    height: 100vh;
     display: flex;
     justify-content: space-between !important;
     align-items: center;
     flex-direction: column;
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 60px 4px;
-   
+
     margin-top: -200px;
-    
-   
-    
-    
+
+
+
+
 }
-.wwinput{
-margin-top: -70px;
+
+.wwinput {
+    margin-top: -70px;
 }
-.submitvak{
-margin-bottom: 40px;
+
+.submitvak {
+    margin-bottom: 40px;
 }
-.logintitle{
+
+.logintitle {
     width: 100%;
     height: 35vh;
     display: flex;
     justify-content: center;
     align-items: center;
-background-color: #3F72FF;
-font-size: 35px;
+    background-color: #3F72FF;
+    font-size: 35px;
 
 
 }
-.logvak{
+span::before,
+::placeholder {
+  padding: 20px;
+}
+
+input[type=password] {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+input[type=email] {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+input[type=text] {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.logvak {
+
     width: 25vw;
     height: 8vh;
     border-radius: 40px;
     border-style: none;
     background-color: #E3E3E3;
+
 }
-.to_register{
-display: flex;
-justify-content: right;
-width: 25vw;
-color: black;
+
+.logvakbericht {
+
+    width: 27vw;
+    height: 22vh;
+    border-radius: 40px;
+    border-style: none;
+    background-color: #E3E3E3;
+
 }
-.loginbutton{
+
+.custom-input {
+    display: block;
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 16px;
+    line-height: 1.5;
+    vertical-align: top;
+}
+
+.to_register {
+    display: flex;
+    justify-content: right;
+    width: 25vw;
+    color: black;
+}
+
+.loginbutton {
     width: 15vw;
     height: 8vh;
     background-color: #3F72FF;
     font-size: 30px;
     border-style: none;
-    border-radius: 20px;
+    border-radius: 40px;
 }
+
 .flex {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.logoflex{
+
+.logoflex {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .popp {
     font-family: "Poppins", sans-serif;
     font-weight: 700;
@@ -113,11 +174,32 @@ color: black;
     color: white;
 }
 
-h3{
+h3 {
     font-family: "Poppins", sans-serif;
     font-weight: 700;
     font-style: normal;
     color: white;
+}
+.vluchtinfoplaats{
+    height: 60vh;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tableblauw{
+    font-size: 20px;
+    font-weight: 700;
+    height: 50vh;
+    width: 70vw;
+    background-color: #3F72FF; 
+    border-radius: 20px;
+    border-spacing: 0cap;
+    text-align: left;
+    
+    
+    
+
 }
 
 .blauw {
@@ -125,7 +207,9 @@ h3{
 }
 
 .geel {
+    
     background-color: #FFC22F;
+   
 }
 
 .width100 {
@@ -137,22 +221,23 @@ h3{
     height: 12vh;
 }
 
-.login{
+.login {
     width: 10%;
-    height:80%;
+    height: 80%;
     border-radius: 25px;
-    
+
 }
 
-.margin{
-margin: 10px;
+.margin {
+    margin: 10px;
 }
 
-.headerbuttons{
+.headerbuttons {
     width: 25%;
 }
+
 /* header_eind */
-a{
+a {
     width: 60%;
 }
 
@@ -168,20 +253,20 @@ a{
 .container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between; 
+    justify-content: space-between;
 }
 
 .trip-item {
     box-sizing: border-box;
     height: 300px;
     display: flex;
-    
+
     flex-direction: column;
     justify-content: space-between;
     position: relative;
 }
 
-.margintopbot{
+.margintopbot {
     margin-top: 10px;
     margin-bottom: 10px;
 }
@@ -195,41 +280,105 @@ a{
 .trip-price {
     position: absolute;
     bottom: 20px;
-    right: 20px; 
+    right: 20px;
 }
-.info_landen{
+
+.info_landen {
     height: 500px;
 }
 
 
-.zoekform{
+.zoekform {
     height: 20vh;
     width: 100%;
 }
+.rijsvak{
+    border-style: none;
+   display: flex;
+   justify-content: center ;
+   align-items: center;
+  border-right: solid;
 
-.fotoinfo{
+
+}
+.rijsvak2{
+    border-style: none;
+   display: flex;
+   justify-content: center ;
+  border-right: solid;
+width: 20vw;
+
+}
+#destinationForm{
+    display: flex;
+    justify-content: space-between;
+width: 63vw;
+}
+.border{
+    border-left: black !important;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    
+}
+.border2{
+    border-right: black !important;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    
+}
+.rijsbutton{
+display: flex;
+justify-content: right;
+
+
+}
+.rijsbuttonelements{
+    background-color: #FFC22F;
+    border-radius: 40px;
+    width: 10vw;
+    color: white;
+    border-style: none;
+}
+.rijsbalk{
+    background-color: white;
+    border-style:solid;
+    width: 50vw;
+    height: 5vh;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.ppvak{
+display: flex;
+align-items: center;
+}
+.fotoinfo {
     width: 600px;
     height: 400px;
 }
-.between{
+
+.between {
     display: flex;
     justify-content: space-around;
     height: 400px;
 }
-.content{
+
+.content {
     display: flex;
     justify-content: space-around;
 }
 
-.tekstOver{
+.tekstOver {
     display: flex;
     flex-direction: column;
     text-align: center;
     width: 40%;
 }
 
-.contactBerichten{
+.contactBerichten {
     width: 30%;
     height: 300px;
-    
+
 }

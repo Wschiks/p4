@@ -1,4 +1,4 @@
-<?php include ('connection.php'); ?>
+
 <?php include ('header.php'); ?>
 <?php include ('eerste_oog.php'); ?>
 <?php include ('zoekbalk.php'); ?>
@@ -26,9 +26,10 @@
 
     <div class="container">
 
-
+    <?php include ('connection.php'); ?>
 
         <?php
+
         $sql = "SELECT * FROM trip";
         $stmt = $conn->prepare($sql);
         $stmt->execute();
