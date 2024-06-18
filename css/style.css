@@ -8,6 +8,151 @@
     font-style: normal;
     color: white;
 }
+
+.geelfont{
+    color: #FFC22F; 
+}
+
+.midden{
+    display: flex;
+    justify-content: space-between !important;
+    align-items: center;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popp {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.white {
+    color: white;
+}
+
+h3{
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: white;
+}
+
+.blauw {
+    background-color: #3F72FF;
+}
+
+.geel {
+    background-color: #FFC22F;
+}
+
+.width100 {
+    width: 100vw;
+}
+
+/* header */
+#header {
+    height: 10vh;
+}
+
+.login{
+    width: 10%;
+    height:80%;
+    border-radius: 25px;
+}
+
+.margin{
+margin: 10px;
+}
+
+.headerbuttons{
+    width: 25%;
+}
+/* header_eind */
+a{
+    width: 49%;
+}
+
+/* index landingspagina homepage */
+
+.onze {
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 80px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+}
+
+.trip-item {
+    box-sizing: border-box;
+    height: 300px;
+    display: flex;
+    
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.margintopbot{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.trip-info {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+.trip-price {
+    position: absolute;
+    bottom: 20px;
+    right: 20px; 
+}
+.info_landen{
+    height: 500px;
+}
+
+
+.zoekform{
+    height: 20vh;
+    width: 100%;
+}
+
+.fotoinfo{
+    width: 600px;
+    height: 400px;
+}
+.between{
+    display: flex;
+    justify-content: space-around;
+    height: 400px;
+}
+.content{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.tekstOver{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 40%;
+}
+
+
+
+/* login page */
+
 .fontgrey {
     font-family: "Poetsen One", sans-serif;
     font-weight: 400;
@@ -15,18 +160,6 @@
 color: #818181;
 }
 
-.geelfont{
-    color: #FFC22F; 
-}
-
-.midden{
-   
-    display: flex;
-    justify-content: space-between !important;
-    align-items: center;
-    
-    
-}
 .bluevak{
     width: 100%;
     height: 50vh;
@@ -92,144 +225,4 @@ color: black;
     font-size: 30px;
     border-style: none;
     border-radius: 20px;
-}
-.flex {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.logoflex{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.popp {
-    font-family: "Poppins", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-}
-
-.white {
-    color: white;
-}
-
-h3{
-    font-family: "Poppins", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    color: white;
-}
-
-.blauw {
-    background-color: #3F72FF;
-}
-
-.geel {
-    background-color: #FFC22F;
-}
-
-.width100 {
-    width: 100vw;
-}
-
-/* header */
-#header {
-    height: 12vh;
-}
-
-.login{
-    width: 10%;
-    height:80%;
-    border-radius: 25px;
-    
-}
-
-.margin{
-margin: 10px;
-}
-
-.headerbuttons{
-    width: 25%;
-}
-/* header_eind */
-a{
-    width: 60%;
-}
-
-/* index landingspagina homepage */
-
-.onze {
-    font-family: "Poetsen One", sans-serif;
-    font-weight: 800;
-    font-style: normal;
-    font-size: 80px;
-}
-
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; 
-}
-
-.trip-item {
-    box-sizing: border-box;
-    height: 300px;
-    display: flex;
-    
-    flex-direction: column;
-    justify-content: space-between;
-    position: relative;
-}
-
-.margintopbot{
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-.trip-info {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-}
-
-.trip-price {
-    position: absolute;
-    bottom: 20px;
-    right: 20px; 
-}
-.info_landen{
-    height: 500px;
-}
-
-
-.zoekform{
-    height: 20vh;
-    width: 100%;
-}
-
-.fotoinfo{
-    width: 600px;
-    height: 400px;
-}
-.between{
-    display: flex;
-    justify-content: space-around;
-    height: 400px;
-}
-.content{
-    display: flex;
-    justify-content: space-around;
-}
-
-.tekstOver{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    width: 40%;
-}
-
-.contactBerichten{
-    width: 30%;
-    height: 300px;
-    
 }

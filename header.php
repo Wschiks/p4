@@ -43,7 +43,7 @@
             <a href="#onze_reizen">
                 <h3>Fliegen</h3>
             </a>
-            <a href="#.php">
+            <a href="#overons">
                 <h3>Over ons</h3>
             </a>
             <a href="contact.php">

@@ -49,10 +49,10 @@
      <div class="countrys">
         <label for="country"> <p class="font fontblack">Choose a country:</p></label>
         <select  id="country" name="countrys">
-          <option  value="Nederlands"><p class="font fontblack">Nederlands</p></option>
-          <option   value="Engels"><p class="font fontblack">Engels</p></option>
-          <option   value="Spaans"><p class="font fontblack">Spaans</p></option>
-          <option   value="Duits"><p class="font fontblack">Duits</p></option>
+          <option  value="Nederlands"><p class="font fontblack">🇳🇱 Nederlands</p></option>
+          <option   value="Engels"><p class="font fontblack">🇬🇧 Engels</p></option>
+          <option   value="Spaans"><p class="font fontblack">🇪🇸 Spaans</p></option>
+          <option   value="Duits"><p class="font fontblack">🇩🇪 Duits</p></option>
         </select>
         </div>
         </div>

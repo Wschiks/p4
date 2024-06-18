@@ -1,5 +1,4 @@
 <?php include ('connection.php'); ?>
-<?php include ('header.php'); ?>
 <!DOCTYPE html>
 <html lang="nl">
 
@@ -28,24 +27,27 @@
             }
             ?>
         </div>
+        <div class=" blauw ">
 
-        <?php
-        $tripID = $_GET['tripID'];
-        $sql = "SELECT * FROM trip";
-        $stmt = $conn->prepare($sql);
-        $stmt->execute();
-        $result = $stmt->fetchAll();
+            <?php
+            $sql = 'SELECT * FROM trip where tripID=:tripID';
+            $stmt = $conn->prepare($sql);
+            $stmt->bindParam(':tripID', $tripID);
+            $stmt->execute();
+            $result = $stmt->fetchAll();
+            foreach ($result as $key) {
+                ?>
+                <div class="tekstOver">
+                    <h3> Over <?php echo $key['stad'] ?> </h3>
 
-        foreach ($result as $key) {
+                </div>
+                <?php
+            }
             ?>
-            <h3> <?php echo $key['stad'] ?></h3>
+
 
             <?php
-        }
-        ?>
-        <div class=" blauw between">
-            <?php
-           
+
             $tripID = $_GET['tripID'];
 
             $sql = 'SELECT * FROM info where tripID=:tripID';
@@ -56,11 +58,9 @@
             foreach ($result as $key) {
                 ?>
                 <div class="tekstOver">
-                    <h3> Over Madrid </h3>
                     <div class="content">
+                        <h3> <?php echo $key['informatiestuk'] ?> </h3>
                     </div>
-
-                    <h3> <?php echo $key['informatiestuk'] ?> </h3>
                 </div>
                 <img class=fotoinfo src="<?php echo $key['infoIMG'] ?>" alt=Info Image>
 
@@ -68,7 +68,11 @@
                 <?php
             }
             ?>
+
         </div>
+
+
+
         <table>
             <?php
             foreach ($result as $key) {
