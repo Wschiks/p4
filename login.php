@@ -8,17 +8,17 @@
 <div class="bluevak">
 
 </div>
-    <form method="POST">
+    <form method="POST" action=data/logindata.php>
         <section class="loginpage">
             <div class="loginform">
                 <div class="logintitle">
                     <h3 class="font">LOGIN</h3>
                 </div>
 
-                <input class="logvak font" type="text" name="gebruikersnaam" placeholder="gebruikersnaam">
+                <input class="logvak font" type="text" name="username" placeholder="username">
                 <div class="wwinput">
 
-                    <input class="logvak font" type="password" name="wachtwoord" placeholder="wachtwoord">
+                    <input class="logvak font" type="password" name="password" placeholder="password">
                     <div>
                         <a class="to_register fontgrey" href="regristreren.php">registeren</a>
                     </div>
@@ -35,40 +35,4 @@
 
 </body>
 
-<?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-
-
-
-include ('connection.php');
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
-    if (!empty($_POST['username']) && !empty($_POST['password'])) {
-
-        $sql = "SELECT * FROM users WHERE username = :username";
-        $stmt = $conn->prepare($sql);
-        $stmt->bindParam(':username', $_POST['username']);
-        $result = $stmt->execute();
-
-        $user = $stmt->fetch();
-
-            if ($user && $_POST['wachtwoord'] == $user['wachtwoord']) {
-                header("Location: index.php");
-
-            } else {
-
-                echo "Fout: Ongeldige gebruikersnaam of wachtwoord.";
-            }
-
-    } else {
-
-        echo "Fout: Vul zowel gebruikersnaam als wachtwoord in.";
-    }
-
-}
-
-
-?>
 <?php include ('footer.php'); ?>

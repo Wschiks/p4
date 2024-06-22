@@ -28,6 +28,8 @@ $naam = $_POST["naam"];
     
 
     if ($result) {
+        header("Location: ../login.php");
+
         echo "Registration successful.";
     } else {
         echo "Registration failed.";

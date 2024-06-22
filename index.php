@@ -1,19 +1,50 @@
-<?php include('connection.php'); ?>
-<?php include('header.php'); ?>
-<?php include('eerste_oog.php'); ?>
-<?php include('zoekbalk.php'); ?>
+<?php include ('connection.php'); ?>
+
+
+
 
 <!DOCTYPE html>
 <html lang="nl">
+
 <head>
+    <link rel="stylesheet" href="css/headerstyle.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
+        rel="stylesheet">
 </head>
 
-<body>
+<div>
+    <?php include ('header.php'); ?>
+    <?php include ('eerste_oog.php'); ?>
+
+
+
+    <?php
+    session_start();
+    var_dump($_SESSION['rol']);
+    ?>
+    <?php if ($_SESSION['rol'] == "admin") {
+        ?>
+        <a href="admin.php">
+            <h1>admin</h1>
+        </a>
+        <?php
+    }
+    ?>
+    <div class="zoekform blauw width100 flex">
+        <form action="" method="GET">
+            <section>
+                <input class="invoeg opmaak" type="text" name="zoekterm" placeholder="Zoek producten">
+                <button class="zoek opmaak" type="submit">Zoeken</button>
+                <section class="midden">
+                </section>
+        </form>
+    </div>
+
     <section id="onze_reizen">
         <div class="flex">
             <h2 class="onze geelfont">Onze reizen</h2>
@@ -21,17 +52,27 @@
 
         <div class="container">
             <?php
-            $sql = "SELECT * FROM trip";
+
+            if (isset($_GET['zoekterm'])) {
+                $zoekterm = '%' . $_GET['zoekterm'] . '%';
+                $sql = "SELECT * FROM trip WHERE land LIKE :zoekterm OR stad LIKE :zoekterm OR personen LIKE :zoekterm";
+            } else {
+                $sql = "SELECT * FROM trip";
+            }
+
             $stmt = $conn->prepare($sql);
+
+            if (isset($zoekterm)) {
+                $stmt->bindParam(':zoekterm', $zoekterm);
+            }
             $stmt->execute();
             $result = $stmt->fetchAll();
-
 
             foreach ($result as $key) {
                 ?>
                 <a href="info.php?tripID=<?= $key['tripID'] ?>" class="trip-link">
-                    <div class="trip-item margintopbot" <?php if (array_key_exists('img', $key)) { ?> 
-                        style="background-image: url('<?= $key['img'] ?>'); background-size: cover; background-position: center;" 
+                    <div class="trip-item margintopbot" <?php if (array_key_exists('img', $key)) { ?>
+                            style="background-image: url('<?= $key['img'] ?>'); background-size: cover; background-position: center;"
                         <?php } ?>>
                         <div class="trip-info margintopbot">
                             <?php if (array_key_exists('land', $key)) { ?>
@@ -53,15 +94,15 @@
                     </div>
                 </a>
                 <?php
-
             }
             ?>
         </div>
     </section>
-</body>
+    </body>
+
 </html>
 
-
+<!-- JavaScript voor vloeiende scroll -->
 <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script type="text/javascript">
     $(function () {
@@ -73,5 +114,5 @@
     });
 </script>
 
-<?php include('overons.php'); ?>
-<?php include('footer.php'); ?>
+<?php include ('overons.php'); ?>
+<?php include ('footer.php'); ?>

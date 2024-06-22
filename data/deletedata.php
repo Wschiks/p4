@@ -6,16 +6,22 @@ error_reporting(E_ALL);
 
 ?>
 <?php 
+
+$id_to_delete = $_POST['tripID'];
+         $sql_delete = "DELETE FROM info WHERE tripID = :tripID";
+         $stmt_delete = $conn->prepare($sql_delete);
+         $stmt_delete->bindParam(':tripID', $id_to_delete);
+         $stmt_delete->execute();
+
+
          $id_to_delete = $_POST['tripID'];
          $sql_delete = "DELETE FROM trip WHERE tripID = :tripID";
          $stmt_delete = $conn->prepare($sql_delete);
          $stmt_delete->bindParam(':tripID', $id_to_delete);
          $stmt_delete->execute();
 
-        if($stmt_delete){
+         if($stmt_delete){
             header('Location: ../admin.php');
         }else{
             echo 'FOUT';
         }
-    
-

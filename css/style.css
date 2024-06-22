@@ -9,11 +9,11 @@
     color: white;
 }
 
-.geelfont{
-    color: #FFC22F; 
+.geelfont {
+    color: #FFC22F;
 }
 
-.midden{
+.midden {
     display: flex;
     justify-content: space-between !important;
     align-items: center;
@@ -35,7 +35,7 @@
     color: white;
 }
 
-h3{
+h3 {
     font-family: "Poppins", sans-serif;
     font-weight: 700;
     font-style: normal;
@@ -44,7 +44,7 @@ h3{
 
 .blauw {
     background-color: #3F72FF;
-    
+
 }
 
 .geel {
@@ -60,21 +60,22 @@ h3{
     height: 10vh;
 }
 
-.login{
+.login {
     width: 10%;
-    height:80%;
+    height: 80%;
     border-radius: 25px;
 }
 
-.margin{
-margin: 10px;
+.margin {
+    margin: 10px;
 }
 
-.headerbuttons{
+.headerbuttons {
     width: 25%;
 }
+
 /* header_eind */
-a{
+a {
     width: 49%;
 }
 
@@ -90,20 +91,20 @@ a{
 .container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between; 
+    justify-content: space-between;
 }
 
 .trip-item {
     box-sizing: border-box;
     height: 300px;
     display: flex;
-    
+
     flex-direction: column;
     justify-content: space-between;
     position: relative;
 }
 
-.margintopbot{
+.margintopbot {
     margin-top: 10px;
     margin-bottom: 10px;
 }
@@ -117,28 +118,31 @@ a{
 .trip-price {
     position: absolute;
     bottom: 20px;
-    right: 20px; 
+    right: 20px;
 }
-.info_landen{
+
+.info_landen {
     height: 500px;
 }
 
 
-.zoekform{
+.zoekform {
     height: 20vh;
     width: 100%;
 }
 
-.fotoinfo{
+.fotoinfo {
     width: 600px;
     height: 400px;
 }
-.between{
+
+.between {
     display: flex;
     justify-content: space-around;
     height: 400px;
 }
-.content{
+
+.content {
     display: flex;
     justify-content: space-evenly;
 }
@@ -156,10 +160,11 @@ a{
     font-style: normal;
     color: #818181;
 }
+
 .font2 {
     font-family: "Inter", sans-serif;
     font-weight: 500;
-    font-style:normal;
+    font-style: normal;
     color: #BFBFBF;
 }
 
@@ -229,9 +234,10 @@ a{
 
 
 }
+
 span::before,
 ::placeholder {
-  padding: 20px;
+    padding: 20px;
 }
 
 input[type=password] {
@@ -277,7 +283,6 @@ input[type=text] {
     box-sizing: border-box;
     font-size: 16px;
     line-height: 1.5;
-    vertical-align: top;
 }
 
 .to_register {
@@ -295,7 +300,7 @@ input[type=text] {
     border-style: none;
     border-radius: 40px;
 }
-<<<<<<< HEAD
+
 
 .flex {
     display: flex;
@@ -325,33 +330,36 @@ h3 {
     font-style: normal;
     color: white;
 }
-.vluchtinfoplaats{
+
+.vluchtinfoplaats {
     height: 60vh;
     width: auto;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.tableblauw{
+
+.tableblauw {
     font-size: 20px;
     font-weight: 700;
     height: 50vh;
     width: 70vw;
-    background-color: #3F72FF; 
+    background-color: #3F72FF;
     border-radius: 20px;
     border-spacing: 0cap;
     text-align: left;
-    
-    
-    
+
+
+
 
 }
 
-.inforeis{
+.inforeis {
     display: flex;
-   justify-content: space-between;
+    justify-content: space-between;
 }
-.inforeistext{
+
+.inforeistext {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -360,13 +368,15 @@ h3 {
 }
 
 .geel {
-    
+
     background-color: #FFC22F;
-   
+
 }
-.fontsize{
-font-size: 35px;
+
+.fontsize {
+    font-size: 35px;
 }
+
 .width100 {
     width: 100vw;
 }
@@ -374,7 +384,7 @@ font-size: 35px;
 /* header */
 #header {
     height: 12vh;
-    
+
 }
 
 .login {
@@ -448,56 +458,62 @@ a {
     height: 20vh;
     width: 100%;
 }
-.rijsvak{
-    border-style: none;
-   display: flex;
-   justify-content: center ;
-   align-items: center;
-  border-right: solid;
 
+.rijsvak {
+    border-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: solid;
+}
+
+.rijsvak2 {
+    border-style: none;
+    display: flex;
+    justify-content: center;
+    border-right: solid;
+    width: 20vw;
 
 }
-.rijsvak2{
-    border-style: none;
-   display: flex;
-   justify-content: center ;
-  border-right: solid;
-width: 20vw;
 
-}
-#destinationForm{
+#destinationForm {
     display: flex;
     justify-content: space-between;
-width: 63vw;
+    width: 63vw;
 }
-.border{
+
+.border {
     border-left: black !important;
     border-top-left-radius: 40px;
     border-bottom-left-radius: 40px;
-    
+
 }
-.border2{
+
+.border2 {
     border-right: black !important;
     border-top-right-radius: 40px;
     border-bottom-right-radius: 40px;
-    
+
 }
-.rijsbutton{
-display: flex;
-justify-content: right;
+
+.rijsbutton {
+    display: flex;
+    justify-content: right;
 
 
 }
-.rijsbuttonelements{
+
+.rijsbuttonelements {
     background-color: #FFC22F;
     border-radius: 40px;
     width: 10vw;
     color: white;
     border-style: none;
 }
-.rijsbalk{
+
+.rijsbalk {
     background-color: white;
-    border-style:solid;
+    border-style: solid;
     width: 50vw;
     height: 5vh;
     border-radius: 40px;
@@ -506,10 +522,11 @@ justify-content: right;
     justify-content: space-between;
 }
 
-.ppvak{
-display: flex;
-align-items: center;
+.ppvak {
+    display: flex;
+    align-items: center;
 }
+
 .fotoinfo {
     width: 600px;
     height: 400px;
@@ -523,8 +540,8 @@ align-items: center;
 }
 
 .content {
-   width: 40vw;
-    
+    width: 40vw;
+
 }
 
 .tekstOver {
@@ -534,7 +551,7 @@ align-items: center;
     align-items: center;
     text-align: center;
     width: 100%;
-   
+
 }
 
 .contactBerichten {
@@ -542,13 +559,15 @@ align-items: center;
     height: 300px;
 
 }
-.buttonvak{
+
+.buttonvak {
     width: 85%;
     height: 10vh;
     display: flex;
     justify-content: right;
 }
-.buttonvorm{
+
+.buttonvorm {
     border-radius: 20px;
     width: 10vw;
 }
