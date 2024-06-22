@@ -9,6 +9,147 @@
     color: white;
 }
 
+.geelfont{
+    color: #FFC22F; 
+}
+
+.midden{
+    display: flex;
+    justify-content: space-between !important;
+    align-items: center;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popp {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.white {
+    color: white;
+}
+
+h3{
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: white;
+}
+
+.blauw {
+    background-color: #3F72FF;
+    
+}
+
+.geel {
+    background-color: #FFC22F;
+}
+
+.width100 {
+    width: 100vw;
+}
+
+/* header */
+#header {
+    height: 10vh;
+}
+
+.login{
+    width: 10%;
+    height:80%;
+    border-radius: 25px;
+}
+
+.margin{
+margin: 10px;
+}
+
+.headerbuttons{
+    width: 25%;
+}
+/* header_eind */
+a{
+    width: 49%;
+}
+
+/* index landingspagina homepage */
+
+.onze {
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 80px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+}
+
+.trip-item {
+    box-sizing: border-box;
+    height: 300px;
+    display: flex;
+    
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.margintopbot{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.trip-info {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+.trip-price {
+    position: absolute;
+    bottom: 20px;
+    right: 20px; 
+}
+.info_landen{
+    height: 500px;
+}
+
+
+.zoekform{
+    height: 20vh;
+    width: 100%;
+}
+
+.fotoinfo{
+    width: 600px;
+    height: 400px;
+}
+.between{
+    display: flex;
+    justify-content: space-around;
+    height: 400px;
+}
+.content{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+
+
+
+/* login page */
+
+
 .fontgrey {
     font-family: "Poetsen One", sans-serif;
     font-weight: 400;
@@ -21,6 +162,7 @@
     font-style:normal;
     color: #BFBFBF;
 }
+
 
 .geelfont {
     color: #FFC22F;
@@ -36,6 +178,8 @@
 }
 
 .bluevak {
+
+
     width: 100%;
     height: 50vh;
     background-color: #3F72FF;
@@ -151,6 +295,7 @@ input[type=text] {
     border-style: none;
     border-radius: 40px;
 }
+<<<<<<< HEAD
 
 .flex {
     display: flex;
@@ -202,8 +347,16 @@ h3 {
 
 }
 
-.blauw {
-    background-color: #3F72FF;
+.inforeis{
+    display: flex;
+   justify-content: space-between;
+}
+.inforeistext{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 40px;
 }
 
 .geel {
@@ -211,7 +364,9 @@ h3 {
     background-color: #FFC22F;
    
 }
-
+.fontsize{
+font-size: 35px;
+}
 .width100 {
     width: 100vw;
 }
@@ -219,6 +374,7 @@ h3 {
 /* header */
 #header {
     height: 12vh;
+    
 }
 
 .login {
@@ -357,6 +513,7 @@ align-items: center;
 .fotoinfo {
     width: 600px;
     height: 400px;
+    margin: 40px;
 }
 
 .between {
@@ -366,19 +523,32 @@ align-items: center;
 }
 
 .content {
-    display: flex;
-    justify-content: space-around;
+   width: 40vw;
+    
 }
 
 .tekstOver {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    width: 40%;
+    width: 100%;
+   
 }
 
 .contactBerichten {
     width: 30%;
     height: 300px;
 
+}
+.buttonvak{
+    width: 85%;
+    height: 10vh;
+    display: flex;
+    justify-content: right;
+}
+.buttonvorm{
+    border-radius: 20px;
+    width: 10vw;
 }

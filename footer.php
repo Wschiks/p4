@@ -28,11 +28,11 @@
             <h3>Contact</h3>
         </div>
         <div class="nieuwsbrief">
-           <form class="nieuwsbriefform">
-            <label for="nieuwslabel"><p class="font fontblack">Abonneer op onze nieuwsbrief</p></label>
-            <input class="typebar" type="text" id="nieuwslabel">
-            <input class="nieuwsbriefbutton blauw" type="submit" value="Abonneren">
-           </form>
+        <form class="nieuwsbriefform" action="process.php" method="post">
+    <label for="nieuwslabel"><p class="font fontblack">Abonneer op onze nieuwsbrief</p></label>
+    <input class="typebar" type="email" name="email" id="nieuwslabel" required>
+    <input class="nieuwsbriefbutton blauw" type="submit" value="Abonneren">
+</form>
         </div>
     </div>
     <div class="footer2">
@@ -49,10 +49,10 @@
      <div class="countrys">
         <label for="country"> <p class="font fontblack">Choose a country:</p></label>
         <select  id="country" name="countrys">
-          <option  value="Nederlands"><p class="font fontblack">Nederlands</p></option>
-          <option   value="Engels"><p class="font fontblack">Engels</p></option>
-          <option   value="Spaans"><p class="font fontblack">Spaans</p></option>
-          <option   value="Duits"><p class="font fontblack">Duits</p></option>
+          <option  value="Nederlands"><p class="font fontblack">🇳🇱 Nederlands</p></option>
+          <option   value="Engels"><p class="font fontblack">🇬🇧 Engels</p></option>
+          <option   value="Spaans"><p class="font fontblack">🇪🇸 Spaans</p></option>
+          <option   value="Duits"><p class="font fontblack">🇩🇪 Duits</p></option>
         </select>
         </div>
         </div>
