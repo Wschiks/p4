@@ -1,3 +1,4 @@
+
 * {
     margin: 0px;
 }
@@ -40,11 +41,11 @@ h3 {
     font-weight: 700;
     font-style: normal;
     color: white;
+    text-decoration: none;
 }
 
 .blauw {
     background-color: #3F72FF;
-
 }
 
 .geel {
@@ -57,7 +58,7 @@ h3 {
 
 /* header */
 #header {
-    height: 10vh;
+    height: 12vh;
 }
 
 .login {
@@ -76,7 +77,8 @@ h3 {
 
 /* header_eind */
 a {
-    width: 49%;
+    width: 49%
+    
 }
 
 /* index landingspagina homepage */
@@ -98,7 +100,6 @@ a {
     box-sizing: border-box;
     height: 300px;
     display: flex;
-
     flex-direction: column;
     justify-content: space-between;
     position: relative;
@@ -125,7 +126,6 @@ a {
     height: 500px;
 }
 
-
 .zoekform {
     height: 20vh;
     width: 100%;
@@ -134,6 +134,7 @@ a {
 .fotoinfo {
     width: 600px;
     height: 400px;
+    margin: 40px;
 }
 
 .between {
@@ -145,14 +146,8 @@ a {
 .content {
     display: flex;
     justify-content: space-evenly;
+    width: 40vw;
 }
-
-
-
-
-
-/* login page */
-
 
 .fontgrey {
     font-family: "Poetsen One", sans-serif;
@@ -168,23 +163,7 @@ a {
     color: #BFBFBF;
 }
 
-
-.geelfont {
-    color: #FFC22F;
-}
-
-.midden {
-
-    display: flex;
-    justify-content: space-between !important;
-    align-items: center;
-
-
-}
-
 .bluevak {
-
-
     width: 100%;
     height: 50vh;
     background-color: #3F72FF;
@@ -195,8 +174,6 @@ a {
     width: 100%;
     display: flex;
     justify-content: center;
-
-
 }
 
 .loginform {
@@ -207,12 +184,7 @@ a {
     align-items: center;
     flex-direction: column;
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 60px 4px;
-
     margin-top: -200px;
-
-
-
-
 }
 
 .wwinput {
@@ -231,8 +203,6 @@ a {
     align-items: center;
     background-color: #3F72FF;
     font-size: 35px;
-
-
 }
 
 span::before,
@@ -240,39 +210,27 @@ span::before,
     padding: 20px;
 }
 
-input[type=password] {
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-input[type=email] {
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
+input[type=password],
+input[type=email],
 input[type=text] {
     padding-left: 20px;
     padding-right: 20px;
 }
 
 .logvak {
-
     width: 25vw;
     height: 8vh;
     border-radius: 40px;
     border-style: none;
     background-color: #E3E3E3;
-
 }
 
 .logvakbericht {
-
     width: 27vw;
     height: 22vh;
     border-radius: 40px;
     border-style: none;
     background-color: #E3E3E3;
-
 }
 
 .custom-input {
@@ -301,34 +259,10 @@ input[type=text] {
     border-radius: 40px;
 }
 
-
-.flex {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .logoflex {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.popp {
-    font-family: "Poppins", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-}
-
-.white {
-    color: white;
-}
-
-h3 {
-    font-family: "Poppins", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    color: white;
 }
 
 .vluchtinfoplaats {
@@ -346,12 +280,8 @@ h3 {
     width: 70vw;
     background-color: #3F72FF;
     border-radius: 20px;
-    border-spacing: 0cap;
+    border-spacing: 0;
     text-align: left;
-
-
-
-
 }
 
 .inforeis {
@@ -367,99 +297,12 @@ h3 {
     margin-left: 40px;
 }
 
-.geel {
-
-    background-color: #FFC22F;
-
-}
-
 .fontsize {
     font-size: 35px;
 }
 
-.width100 {
-    width: 100vw;
-}
-
-/* header */
-#header {
-    height: 12vh;
-
-}
-
-.login {
-    width: 10%;
-    height: 80%;
-    border-radius: 25px;
-
-}
-
-.margin {
-    margin: 10px;
-}
-
-.headerbuttons {
-    width: 25%;
-}
-
-/* header_eind */
-a {
-    width: 60%;
-}
-
-/* index landingspagina homepage */
-
-.onze {
-    font-family: "Poetsen One", sans-serif;
-    font-weight: 800;
-    font-style: normal;
-    font-size: 80px;
-}
-
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.trip-item {
-    box-sizing: border-box;
-    height: 300px;
-    display: flex;
-
-    flex-direction: column;
-    justify-content: space-between;
-    position: relative;
-}
-
-.margintopbot {
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-.trip-info {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-}
-
-.trip-price {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-}
-
-.info_landen {
-    height: 500px;
-}
-
-
-.zoekform {
-    height: 20vh;
-    width: 100%;
-}
-
-.rijsvak {
+.rijsvak,
+.rijsvak2 {
     border-style: none;
     display: flex;
     justify-content: center;
@@ -468,12 +311,7 @@ a {
 }
 
 .rijsvak2 {
-    border-style: none;
-    display: flex;
-    justify-content: center;
-    border-right: solid;
     width: 20vw;
-
 }
 
 #destinationForm {
@@ -486,21 +324,17 @@ a {
     border-left: black !important;
     border-top-left-radius: 40px;
     border-bottom-left-radius: 40px;
-
 }
 
 .border2 {
     border-right: black !important;
     border-top-right-radius: 40px;
     border-bottom-right-radius: 40px;
-
 }
 
 .rijsbutton {
     display: flex;
     justify-content: right;
-
-
 }
 
 .rijsbuttonelements {
@@ -527,23 +361,6 @@ a {
     align-items: center;
 }
 
-.fotoinfo {
-    width: 600px;
-    height: 400px;
-    margin: 40px;
-}
-
-.between {
-    display: flex;
-    justify-content: space-around;
-    height: 400px;
-}
-
-.content {
-    width: 40vw;
-
-}
-
 .tekstOver {
     display: flex;
     flex-direction: column;
@@ -551,13 +368,11 @@ a {
     align-items: center;
     text-align: center;
     width: 100%;
-
 }
 
 .contactBerichten {
     width: 30%;
     height: 300px;
-
 }
 
 .buttonvak {

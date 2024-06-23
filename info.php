@@ -1,4 +1,15 @@
-<?php include ('connection.php'); ?>
+<?php include ('connection.php'); 
+
+session_start();
+
+if (!isset($_SESSION['rol']) || ($_SESSION['rol'] != "admin" && $_SESSION['rol'] != "user")) {
+    header("Location: login.php");
+    exit();
+}
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="nl">
 
@@ -107,15 +118,14 @@
             ?>
         </table>
 
-        </div>
         <form action="data/dataWinkelmand.php" method="post">
-        <input type="hidden" name="tripID" value="<?php echo $tripID; ?>">
-        <div class="buttonvak">
+    <input type="hidden" name="tripID" value="<?= $key['tripID'] ?>">
+    <input type="submit" name="toevoegen_aan_winkelmand" value="Toevoegen aan winkelmand">
+</form>
 
-<button class="buttonvorm" ><a  href="winkelmand.php"> Bestellen</a></button>
+</form>
 
-          
-        </div>
-        </div>
+        </div>  
         </form>
-       
+      
+        

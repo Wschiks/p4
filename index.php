@@ -7,6 +7,7 @@
 <html lang="nl">
 
 <head>
+<link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/headerstyle.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,7 +26,7 @@
 
     <?php
     session_start();
-    var_dump($_SESSION['rol']);
+
     ?>
     <?php if ($_SESSION['rol'] == "admin") {
         ?>
@@ -98,6 +99,8 @@
             ?>
         </div>
     </section>
+    <?php include ('overons.php'); ?>
+    <?php include ('footer.php'); ?>
     </body>
 
 </html>
@@ -114,5 +117,4 @@
     });
 </script>
 
-<?php include ('overons.php'); ?>
-<?php include ('footer.php'); ?>
+

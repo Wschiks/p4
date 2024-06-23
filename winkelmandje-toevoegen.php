@@ -1,42 +1,34 @@
 <?php
-include ('connection.php');
 session_start();
-if(isset($_SESSION['email'])){
+include 'connection.php';
 
-// Retrieve data from the form
-$boekid = $_POST['boekid'];
+if (isset($_SESSION['user_id']) && isset($_POST['flight_id'])) {
+    $user_id = $_SESSION['user_id'];
+    $flight_id = $_POST['flight_id'];
+    $quantity = 1;
 
-// Check if the product already exists in the winkelmandje
-$sql_check = "SELECT * FROM boekingen WHERE reisid = :id";
-$prepare_check = $conn->prepare($sql_check);
-$prepare_check->bindParam(':id', $boekid);
-$prepare_check->execute();
+    // Controleer of de vlucht al in de winkelwagen staat
+    $stmt = $conn->prepare("SELECT * FROM winkelmand WHERE user_id = ? AND flight_id = ?");
+    $stmt->execute([$user_id, $flight_id]);
+    $item = $stmt->fetch();
 
-$user = "SELECT * FROM user WHERE email = :email ";
-$prepare_user = $conn->prepare($user);
-$prepare_user->bindParam(':email', $_SESSION['email']);
-$prepare_user->execute();
-$users = $prepare_user->fetch();
-if ($prepare_check->rowCount() > 0) {
+    if ($item) {
+        // Als de vlucht al in de winkelwagen staat, update het aantal
+        $new_quantity = $item['quantity'] + 1;
+        $stmt = $conn->prepare("UPDATE winkelmand SET quantity = ? WHERE user_id = ? AND flight_id = ?");
+        $stmt->execute([$new_quantity, $user_id, $flight_id]);
+    } else {
+        // Voeg de vlucht toe aan de winkelwagen
+        $stmt = $conn->prepare("INSERT INTO winkelmand (user_id, flight_id, quantity) VALUES (?, ?, ?)");
+        $stmt->execute([$user_id, $flight_id, $quantity]);
+    }
 
-    $sql_update = "UPDATE boekingen SET aantal = aantal + 1 WHERE reisid = :id";
-    $prepare_update = $conn->prepare($sql_update);
-    $prepare_update->bindParam(':id', $boekid);
-    $prepare_update->execute();
+    // Redirect naar winkelwagen pagina of een andere pagina
+    header("Location: winkelwagen.php");
+    exit();
 } else {
-    $aantal = 1;
-    // If the product doesn't exist, insert a new row
-    $sql_insert = "INSERT INTO boekingen (reisid, userid, aantal) VALUES (:reisids, :userid, :aantal)";
-    $prepare_insert = $conn->prepare($sql_insert);
-    $prepare_insert->bindParam(':reisids', $boekid);
-    $prepare_insert->bindParam(':userid', $users["userId"]);
-    $prepare_insert->bindParam(':aantal', $aantal);
-    $prepare_insert->execute();
+    // Redirect naar login pagina als de gebruiker niet is ingelogd
+    header("Location: login.php");
+    exit();
 }
 
-header('Location: index.php');
-}
-else
-{
-header('Location: inlog.php');
-}

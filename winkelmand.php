@@ -1,37 +1,56 @@
-<?php 
-include ('connection.php');
+<?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
+session_start();
+include('connection.php');
 
-$tripID = $_GET['tripID'];
+if (!isset($_SESSION['rol']) || ($_SESSION['rol'] != "admin" && $_SESSION['rol'] != "user")) {
+    header("Location: login.php");
+    exit();
+}
 
-$sql = 'SELECT * FROM info where tripID=:tripID';
-$stmt = $conn->prepare($sql);
-$stmt->bindParam(':tripID', $tripID);
-$stmt->execute();
-$result = $stmt->fetchAll();
-foreach ($result as $key) {
-    
-?> <a href="info.php?tripID=<?= $key['tripID'] ?>" class="trip-link">
-<div class="trip-item margintopbot" <?php if (array_key_exists('img', $key)) { ?> 
-    style="background-image: url('<?= $key['img'] ?>'); background-size: cover; background-position: center;" 
-    <?php } ?>>
-    <div class="trip-info margintopbot">
-        <?php if (array_key_exists('land', $key)) { ?>
-            <h3><?= $key['land'] ?></h3>
-        <?php } ?>
-        <?php if (array_key_exists('stad', $key)) { ?>
-            <h3><?= $key['stad'] ?></h3>
-        <?php } ?>
-        <?php if (array_key_exists('personen', $key)) { ?>
-            <h3>personen: <?= $key['personen'] ?></h3>
-        <?php } ?>
-    </div>
-    <?php if (array_key_exists('prijs', $key)) { ?>
-        <div class="trip-price">
-            <h3>Vanaf:</h3>
-            <h3>&euro;<?= $key['prijs'] ?></h3>
-        </div>
-    <?php } ?>
-</div>
-</a>
-   <?php } ?> 
+// Haal de gebruikersID op uit de sessie
+if (isset($_SESSION['usersID'])) {
+    $usersID = $_SESSION['usersID'];
+
+    // Haal de winkelwagen items op voor de ingelogde gebruiker
+    $stmt = $conn->prepare("SELECT w.id, t.flight_name, t.price, w.quantity FROM winkelmandje w JOIN trip t ON w.tripID = t.id WHERE w.usersID = ?");
+    $stmt->execute([$usersID]);
+    $cart_items = $stmt->fetchAll(PDO::FETCH_ASSOC);
+} else {
+    echo "Fout: Geen geldige gebruikersID in de sessie.";
+    exit();
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Winkelwagen</title>
+</head>
+<body>
+    <h1>Jouw Winkelwagen</h1>
+    <ul>
+        <?php foreach ($cart_items as $item): ?>
+            <li>
+                <div class="trip-item">
+                    <div class="trip-info">
+                        <h3><?= htmlspecialchars($item['flight_name']) ?></h3>
+                        <p>Aantal: <?= htmlspecialchars($item['quantity']) ?></p>
+                    </div>
+                    <div class="trip-price">
+                        <h3>Prijs per stuk:</h3>
+                        <h3>&euro;<?= htmlspecialchars($item['price']) ?></h3>
+                        <h3>Totaal:</h3>
+                        <h3>&euro;<?= htmlspecialchars($item['price'] * $item['quantity']) ?></h3>
+                    </div>
+                </div>
+            </li>
+        <?php endforeach; ?>
+    </ul>
+    <a href="checkout.php">Afrekenen</a>
+</body>
+</html>
