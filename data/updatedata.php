@@ -11,26 +11,25 @@ $luchthavenvertek = $_POST['luchthavenvertek'];
 $Luchtvaartmaaschappij = $_POST['Luchtvaartmaaschappij'];
 $Afstand = $_POST['Afstand'];
 $Vluchttijd = $_POST['Vluchttijd'];
-$prijspp = $_POST['prijspp'];
 
-if (isset($tripID) && isset($luchthavenaankomst) && isset($luchthavenvertek) && isset($Luchtvaartmaaschappij) && isset($Afstand) && isset($Vluchttijd)&& isset($prijspp)) {
-    $sql = "UPDATE info SET luchthavenaankomst=:luchthavenaankomst, luchthavenvertek=:luchthavenvertek, Luchtvaartmaaschappij=:Luchtvaartmaaschappij, Afstand=:Afstand, Vluchttijd=:Vluchttijd, prijspp=:prijspp WHERE tripID=:tripID";      
+
+if (isset($tripID) && isset($luchthavenaankomst) && isset($luchthavenvertek) && isset($Luchtvaartmaaschappij) && isset($Afstand) && isset($Vluchttijd)) {
+    $sql = "UPDATE info SET luchthavenaankomst=:luchthavenaankomst, luchthavenvertek=:luchthavenvertek, Luchtvaartmaaschappij=:Luchtvaartmaaschappij, Afstand=:Afstand, Vluchttijd=:Vluchttijd WHERE tripID=:tripID";      
     $stmt = $conn->prepare($sql);
     $stmt->bindParam(':luchthavenaankomst', $luchthavenaankomst);
     $stmt->bindParam(':luchthavenvertek', $luchthavenvertek);
     $stmt->bindParam(':Luchtvaartmaaschappij', $Luchtvaartmaaschappij);
     $stmt->bindParam(':Afstand', $Afstand);
     $stmt->bindParam(':Vluchttijd', $Vluchttijd);
-    $stmt->bindParam(':prijspp', $prijspp);
     $stmt->bindParam(':tripID', $tripID);
 
 
     if ($stmt->execute()) {
         header('Location: ../admin.php');
     } else {
-        echo "Error updating info for tripID: " . $tripID;
+        echo "Error updating tripID: " . $tripID;
     }
 } else {
-    echo "All fields are required";
+    echo "niet all evelden zijn ingevluld";
 }
 

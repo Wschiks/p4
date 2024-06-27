@@ -1,3 +1,4 @@
+
 * {
     margin: 0px;
 }
@@ -40,6 +41,7 @@ h3 {
     font-weight: 700;
     font-style: normal;
     color: white;
+    text-decoration: none;
 }
 
 .blauw {
@@ -56,7 +58,7 @@ h3 {
 
 /* header */
 #header {
-    height: 10vh;
+    height: 12vh;
 }
 
 .login {
@@ -75,7 +77,8 @@ h3 {
 
 /* header_eind */
 a {
-    width: 49%;
+    width: 49%
+    
 }
 
 /* index landingspagina homepage */
@@ -123,7 +126,6 @@ a {
     height: 500px;
 }
 
-
 .zoekform {
     height: 20vh;
     width: 100%;
@@ -132,6 +134,7 @@ a {
 .fotoinfo {
     width: 600px;
     height: 400px;
+    margin: 40px;
 }
 
 .between {
@@ -143,24 +146,21 @@ a {
 .content {
     display: flex;
     justify-content: space-evenly;
+    width: 40vw;
 }
-
-.tekstOver {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    width: 40%;
-}
-
-
-
-/* login page */
 
 .fontgrey {
     font-family: "Poetsen One", sans-serif;
     font-weight: 400;
     font-style: normal;
     color: #818181;
+}
+
+.font2 {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #BFBFBF;
 }
 
 .bluevak {
@@ -174,8 +174,6 @@ a {
     width: 100%;
     display: flex;
     justify-content: center;
-
-
 }
 
 .loginform {
@@ -186,12 +184,7 @@ a {
     align-items: center;
     flex-direction: column;
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 60px 4px;
-
     margin-top: -200px;
-
-
-
-
 }
 
 .wwinput {
@@ -210,8 +203,18 @@ a {
     align-items: center;
     background-color: #3F72FF;
     font-size: 35px;
+}
 
+span::before,
+::placeholder {
+    padding: 20px;
+}
 
+input[type=password],
+input[type=email],
+input[type=text] {
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .logvak {
@@ -220,6 +223,24 @@ a {
     border-radius: 40px;
     border-style: none;
     background-color: #E3E3E3;
+}
+
+.logvakbericht {
+    width: 27vw;
+    height: 22vh;
+    border-radius: 40px;
+    border-style: none;
+    background-color: #E3E3E3;
+}
+
+.custom-input {
+    display: block;
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 16px;
+    line-height: 1.5;
 }
 
 .to_register {
@@ -235,5 +256,203 @@ a {
     background-color: #3F72FF;
     font-size: 30px;
     border-style: none;
+    border-radius: 40px;
+}
+
+.logoflex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vluchtinfoplaats {
+    height: 60vh;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tableblauw {
+    font-size: 20px;
+    font-weight: 700;
+    height: 50vh;
+    width: 70vw;
+    background-color: #3F72FF;
     border-radius: 20px;
+    border-spacing: 0;
+    text-align: left;
+}
+
+.inforeis {
+    display: flex;
+    justify-content: space-between;
+}
+
+.inforeistext {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 40px;
+}
+
+.fontsize {
+    font-size: 35px;
+}
+
+.rijsvak,
+.rijsvak2 {
+    border-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: solid;
+}
+
+.rijsvak2 {
+    width: 20vw;
+}
+
+#destinationForm {
+    display: flex;
+    justify-content: space-between;
+    width: 63vw;
+}
+
+.border {
+    border-left: black !important;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+}
+
+.border2 {
+    border-right: black !important;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+
+.rijsbutton {
+    display: flex;
+    justify-content: right;
+}
+
+.rijsbuttonelements {
+    background-color: #FFC22F;
+    border-radius: 40px;
+    width: 10vw;
+    color: white;
+    border-style: none;
+}
+
+.rijsbalk {
+    background-color: white;
+    border-style: solid;
+    width: 50vw;
+    height: 5vh;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.ppvak {
+    display: flex;
+    align-items: center;
+}
+
+.tekstOver {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.contactBerichten {
+    width: 30%;
+    height: 300px;
+}
+
+.buttonvak {
+    width: 85%;
+    height: 10vh;
+    display: flex;
+    justify-content: right;
+}
+
+.buttonvorm {
+    border-radius: 20px;
+    width: 10vw;
+}
+
+
+#overons{
+    background-color: #3F72FF;
+    width: 100%;
+    height: 80vh;
+    display: flex;
+}
+.overons-foto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+width: 50%;
+}
+
+.overons-text{
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    height:550px ;
+    justify-content: center;
+    align-items: center;
+}
+.fotovak1{
+    display: flex;
+}
+.fotovak2{
+    display: flex;
+}
+.foto1{
+ margin-bottom: 10px;
+}
+.foto2{
+    width: 20vw;
+    margin: 5px;
+    margin-left: 3px;
+    display: flex;
+    align-items: end;
+
+} 
+.foto3{
+ margin-right: 17px; 
+}
+.fotodiv{
+   margin-left: 15px;
+   margin-bottom: 10px;
+    height: 20vh;
+}
+
+
+.invoeg{
+    width: 20vw;
+    height: 5vh;
+    border-radius: 40px;
+    border-style: none;
+}
+.zoek{
+width: 10vw;
+height: 5vh;
+border-radius: 40px;
+background-color: #FFC22F;
+border-style: none;
+margin-left: 7px;
+}
+
+.centered-text{
+ margin-left: 200px;
 }

@@ -4,7 +4,6 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 ?>
-
 <body class="midden">
     <div class="margin mid">
         <form action="data/admindata.php" method="post">

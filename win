@@ -1,0 +1,42 @@
+<?php
+include('connection.php'); // Zorg ervoor dat je verbinding hebt met de database
+
+// Controleer of gebruiker is ingelogd
+session_start();
+if (!isset($_SESSION['usersID'])) {
+    header("Location: login.php"); // Stuur niet-ingelogde gebruikers naar inlogpagina
+    exit();
+}
+
+$usersID = $_SESSION['usersID'];
+
+// Query om reizen op te halen uit het winkelmandje van de gebruiker
+$sql = "SELECT w.mandID, t.* FROM winkelmandje w
+        JOIN trip t ON w.tripID = t.tripID
+        WHERE w.usersID = :usersID";
+$stmt = $conn->prepare($sql);
+$stmt->bindParam(':usersID', $usersID);
+$stmt->execute();
+$result = $stmt->fetchAll();
+
+// Toon de reizen in het winkelmandje
+foreach ($result as $key) {
+    ?>
+    <div class="trip-item">
+        <div class="trip-info">
+            <h3><?= $key['land'] ?></h3>
+            <h3><?= $key['stad'] ?></h3>
+            <h3>Personen: <?= $key['personen'] ?></h3>
+        </div>
+        <div class="trip-price">
+            <h3>Vanaf:</h3>
+            <h3>&euro;<?= $key['prijs'] ?></h3>
+        </div>
+        <form method="post" action="data/verwijderdata.php">
+            <input type="hidden" name="mandID" value="<?= $key['mandID'] ?>">
+            <input type="submit" name="verwijder_product" value="Verwijderen">
+        </form>
+    </div>
+    <?php
+}
+?>

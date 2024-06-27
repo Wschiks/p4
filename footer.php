@@ -28,11 +28,11 @@
             <h3>Contact</h3>
         </div>
         <div class="nieuwsbrief">
-           <form class="nieuwsbriefform">
-            <label for="nieuwslabel"><p class="font fontblack">Abonneer op onze nieuwsbrief</p></label>
-            <input class="typebar" type="text" id="nieuwslabel">
-            <input class="nieuwsbriefbutton blauw" type="submit" value="Abonneren">
-           </form>
+        <form class="nieuwsbriefform" action="process.php" method="post">
+    <label for="nieuwslabel"><p class="font fontblack">Abonneer op onze nieuwsbrief</p></label>
+    <input class="typebar" type="email" name="email" id="nieuwslabel" required>
+    <input class="nieuwsbriefbutton blauw" type="submit" value="Abonneren">
+</form>
         </div>
     </div>
     <div class="footer2">

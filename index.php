@@ -7,6 +7,8 @@
 <html lang="nl">
 
 <head>
+
+    <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/headerstyle.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,27 +27,31 @@
 
     <?php
     session_start();
-    var_dump($_SESSION['rol']);
+
+
+
     ?>
     <?php if ($_SESSION['rol'] == "admin") {
         ?>
         <a href="admin.php">
-            <h1>admin</h1>
+            <h3 class="zoek flex">admin</h3>
         </a>
         <?php
     }
     ?>
-    <div class="zoekform blauw width100 flex">
-        <form action="" method="GET">
-            <section>
-                <input class="invoeg opmaak" type="text" name="zoekterm" placeholder="Zoek producten">
-                <button class="zoek opmaak" type="submit">Zoeken</button>
-                <section class="midden">
-                </section>
-        </form>
-    </div>
 
-    <section id="onze_reizen">
+
+        <div class="zoekform blauw width100 flex">
+            <form action="" method="GET">
+                <section class="zoekplaats">
+                    <input class="invoeg opmaak" type="text" name="zoekterm" placeholder="Zoek producten">
+                    <button class="zoek opmaak" type="submit">Zoeken</button>
+                    <section class="midden">
+                    </section>
+            </form>
+        </div>
+        <section id="onze_reizen">
+
         <div class="flex">
             <h2 class="onze geelfont">Onze reizen</h2>
         </div>
@@ -98,9 +104,17 @@
             ?>
         </div>
     </section>
+
+
+
+
     </body>
 
 </html>
+
+<?php include ('overons.php'); ?>
+<?php include ('footer.php'); ?>
+
 
 <!-- JavaScript voor vloeiende scroll -->
 <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -113,6 +127,3 @@
         });
     });
 </script>
-
-<?php include ('overons.php'); ?>
-<?php include ('footer.php'); ?>

@@ -2,9 +2,9 @@
 
     <div class="zoekform blauw width100 flex">
         <form id="destinationForm">
-            <label for="destination">Bestemming:</label>
-            <select id="destination" name="destination" required>
-                <option value="">Selecteer een bestemming</option>
+            <div class="rijsbalk">
+            <select class="rijsvak font2 border" id="destination" name="destination" required>
+                <option value="">Bestemming</option>
                 <option value="Madrid">Madrid</option>
                 <option value="Hawaï">Hawaï</option>
                 <option value="Ijsland">Ijsland</option>
@@ -13,16 +13,20 @@
                 <option value="Marrokko">Marrokko</option>
             </select>
 
-            <label for="arrivalDate">Aankomstdatum:</label>
-            <input type="date" id="arrivalDate" name="arrivalDate" required>
+            <label class="ppvak font2" for="">vertrek:</label>
+            <input class="rijsvak font2" type="date" id="arrivalDate" name="arrivalDate"   required>
 
-            <label for="departureDate">Vertrekdatum:</label>
-            <input type="date" id="departureDate" name="departureDate" required>
+            <label class="ppvak font2" for="">aankomst:</label>
+            <input class="rijsvak font2" type="date" id="departureDate" name="departureDate"  required>
 
-            <label for="persons">Aantal personen:</label>
-            <input type="number" id="persons" name="persons" min="1" max="10" required>
-
-            <button type="submit">Zoeken</button>
+        <label class="ppvak font2" for="">personen</label>
+            <input class="rijsvak font2 border2" type="number" id="persons" name="persons"  min="1" max="10" required>
+            
+            </div>
+<div class="rijsbutton">
+            <button class="rijsbuttonelements" type="submit">Zoeken</button>
+            </div>
+            </div>
         </form>
     </div>
 

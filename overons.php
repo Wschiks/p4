@@ -40,7 +40,7 @@
                 </div>
             </div>
         </div>
-        </div>
+       
 
         <div class="overons-text">
             <h3 class="lettergeel">onze reis</h3>
