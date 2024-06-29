@@ -20,6 +20,7 @@
 </head>
 
 <div>
+    
     <?php include ('header.php'); ?>
     <?php include ('eerste_oog.php'); ?>
 

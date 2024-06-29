@@ -163,6 +163,11 @@ a {
     color: #BFBFBF;
 }
 
+.bovennaarbeneden{
+display: flex;
+flex-direction: column;
+}
+
 .bluevak {
     width: 100%;
     height: 50vh;
@@ -456,3 +461,5 @@ margin-left: 7px;
 .centered-text{
  margin-left: 200px;
 }
+
+
